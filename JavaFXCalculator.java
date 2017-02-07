@@ -15,9 +15,10 @@ import javafx.geometry.Pos;
 import javafx.geometry.NodeOrientation;
 import java.lang.*;
 
-public class CalcLabBuccieri extends Application {
+public class JavaFXCalculator extends Application {
 	// Class is modified version of ZyBooks 17.3 Input and event handlers example from ZyBooks.com Introduction to Java module
-	// Calculator cannot handle numbers larger than Integer.MAX_VALUE or DOU
+	// TODO: Handle large numbers without scientific notation
+	// 	 Fix the scrolling top TextField with "large" strings of input
 	
 	// Displays text field at the top 
 	private TextField display;
@@ -345,7 +346,7 @@ public class CalcLabBuccieri extends Application {
 		  });
 		  
 		  // operations. each one checks current number for validity
-plus.setOnAction(new EventHandler<ActionEvent>() {
+		 plus.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				if (!inputOne.equals("")){
@@ -524,7 +525,7 @@ plus.setOnAction(new EventHandler<ActionEvent>() {
 		});
 	
 	applicationStage.setScene(scene);    // Set window's scene  
-	applicationStage.setTitle("Calc Lab Buccieri"); // Set window's title
+	applicationStage.setTitle("JavaFX Calculator"); // Set window's title
 	applicationStage.show();             // Display window
 
 	return;
